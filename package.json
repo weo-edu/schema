@@ -1,0 +1,26 @@
+{
+  "name": "toy-pup",
+  "description": "compose mu middleware",
+  "repository": "themang/toy-pup",
+  "version": "0.1.0",
+  "keywords": [],
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "component-clone": "~0.2.2",
+    "sliced": "0.0.5"
+  },
+  "devDependencies": {
+    "jshint": "^2.6.3",
+    "mocha": "^2.2.1",
+    "no-iits": "0.0.0"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "engines": {
+    "iojs": "~1.5.1"
+  },
+  "license": "MIT"
+}
