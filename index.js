@@ -1,17 +1,33 @@
+/**
+ * Modules
+ */
+
 var is = require('is');
 
-var base = require('./lib/base');
+/**
+ * Libs
+ */
 
+var base = require('./lib/base');
 var array = require('./lib/array');
 var number = require('./lib/number');
 var string = require('./lib/string');
 var object = require('./lib/object');
-
 var types = require('./lib/types');
+
+/**
+ * Expose schema
+ */
 
 module.exports = schema;
 
-schema.types = types;
+/**
+ * Schema factory
+ *
+ * @param {String} type
+ * @param {Object} json
+ * @return {Schema}
+ */
 
 function schema(type, json) {
   if (is.object(type)) {
@@ -22,11 +38,6 @@ function schema(type, json) {
   if (!type) {
     type = 'object';
   }
-
-  if(!json)
-    json = {};
-
-  json.type = type;
 
   switch(type) {
     case 'array':
@@ -41,8 +52,7 @@ function schema(type, json) {
     default:
       return base(json);
   }
-
-};
+}
 
 
 

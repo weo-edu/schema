@@ -1,24 +1,46 @@
 ## schema
 
-A library for creating and manipulating schemas.
+A library for creating immutable json schemas.
 
-
-# Toy Pup
-
-run tests:
+## Installation
 
 ```
-$ make test
+$ npm install @weo-edu/schema
 ```
 
-run validate:
 
-```
-$ make validate
-```
+## Example
 
-run ci:
+```javascript
 
-```
-$ make ci
+var Schema = require('schema');
+var jsen = require('jsen');
+Schema.use(jsen);
+
+var id = Schema('string')
+  .min(16)
+  .max(16)
+  .pattern(/[a-zA-Z0-9]+/);
+
+var username = Schema('string')
+  .min(3)
+  .pattern(/[a-zA-Z_]+/);
+
+var tags = Schema('array')
+  .items({type: 'string'});
+
+var user = Schema()
+  .prop('id', id)
+  .prop('username', username)
+  .prop('displayName')
+  .required(['id', username']);
+
+var share = Schema()
+  .prop('id', id)
+  .prop('actor', user)
+  .prop('object', {type: 'object'})
+  .prop('tags', tags)
+  .required(['id', 'actor', 'tags']);
+
+
 ```

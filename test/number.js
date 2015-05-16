@@ -2,8 +2,6 @@ var Schema = require('../lib/number');
 var assert = require('assert');
 
 describe('Schema number', function() {
-
-
   describe('#max', function() {
     it('should return a new schema instance', function() {
       var schema = Schema();
@@ -34,12 +32,12 @@ describe('Schema number', function() {
   describe('#multiple', function() {
     it('should return a new schema instance', function() {
       var schema = Schema();
-      var schema2 = schema.others({type: 'string'});
+      var schema2 = schema.multiple({type: 'string'});
       assert.notEqual(schema, schema2);
     });
 
     it('should set multipleOf on array schema', function() {
-      var schema = Schema().others({type: 'string'});
+      var schema = Schema().multiple({type: 'string'});
       assert(schema.schema.multipleOf);
     });
   });
@@ -47,12 +45,12 @@ describe('Schema number', function() {
   describe('#openRight', function() {
     it('should return a new schema instance', function() {
       var schema = Schema();
-      var schema2 = schema.unique(true);
+      var schema2 = schema.openRight(true);
       assert.notEqual(schema, schema2);
     });
 
     it('should set exclusiveMaximum on array schema', function() {
-      var schema = Schema().unique(true);
+      var schema = Schema().openRight(true);
       assert(schema.schema.exclusiveMaximum);
     });
   });
@@ -60,13 +58,13 @@ describe('Schema number', function() {
   describe('#openLeft', function() {
     it('should return a new schema instance', function() {
       var schema = Schema();
-      var schema2 = schema.others({type: 'string'});
+      var schema2 = schema.openLeft({type: 'string'});
       assert.notEqual(schema, schema2);
     });
 
     it('should set exclusiveMinimum on array schema', function() {
-      var schema = Schema().others({type: 'string'});
-      assert(schema.schema.additionalItems);
+      var schema = Schema().openLeft({type: 'string'});
+      assert(schema.schema.exclusiveMinimum);
     });
   });
 
