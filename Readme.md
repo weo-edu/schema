@@ -42,5 +42,18 @@ var share = Schema()
   .prop('tags', tags)
   .required(['id', 'actor', 'tags']);
 
+// return true
+share.validate({
+  id: 'abcdabcdabcdabcd',
+  actor: {
+    id: 'abcdabcdabcdabcd',
+    username: 'tio',
+    displayName: 'Tio Tay',
+  },
+  object: {
+    displayName: 'post'
+  },
+  tags: ['dog', 'post']
+});
 
 ```
