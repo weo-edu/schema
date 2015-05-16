@@ -10,7 +10,7 @@ NODE_BIN = ./node_modules/.bin
 
 validate:
 	@${NODE_BIN}/noiit
-	@${NODE_BIN}/jshint index.js test/**
+	@${NODE_BIN}/jshint index.js test/** lib/**
 
 test:
 	@${NODE_BIN}/mocha

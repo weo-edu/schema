@@ -1,7 +1,7 @@
 {
-  "name": "toy-pup",
-  "description": "compose mu middleware",
-  "repository": "themang/toy-pup",
+  "name": "@weo-edu/schema",
+  "description": "A schema creation and manipulation library",
+  "repository": "weo-edu/schema",
   "version": "0.1.0",
   "keywords": [],
   "files": [
@@ -9,6 +9,8 @@
   ],
   "dependencies": {
     "component-clone": "~0.2.2",
+    "component-inherit": "0.0.3",
+    "is": "ianstormtaylor/is",
     "sliced": "0.0.5"
   },
   "devDependencies": {
@@ -20,7 +22,8 @@
     "test": "make test"
   },
   "engines": {
-    "iojs": "~1.5.1"
+    "node": "~0.10.38",
+    "npm": "~2.9.0"
   },
   "license": "MIT"
 }
