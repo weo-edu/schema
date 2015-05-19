@@ -14,8 +14,7 @@ $ npm install @weo-edu/schema
 ```javascript
 
 var Schema = require('schema');
-var jsen = require('jsen');
-Schema.use(jsen);
+Schema.use(require('@weo-edu/validate'));
 
 var id = Schema('string')
   .min(16)
