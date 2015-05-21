@@ -2,7 +2,7 @@
   "name": "@weo-edu/schema",
   "description": "A schema creation and manipulation library",
   "repository": "weo-edu/schema",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "keywords": [],
   "files": [
     "index.js"
@@ -18,7 +18,9 @@
     "mocha": "^2.2.1",
     "no-iits": "0.0.0"
   },
-  "directories": ["lib"],
+  "directories": [
+    "lib"
+  ],
   "scripts": {
     "test": "make test"
   },
