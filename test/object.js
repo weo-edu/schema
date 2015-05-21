@@ -33,7 +33,7 @@ describe('Schema object', function() {
       var schema = Schema().prop(/[ab]/, {type: 'string'});
       assert.deepEqual(schema.schema, {
         patternProperties: {
-          '/[ab]/': {type: 'string'}
+          '[ab]': {type: 'string'}
         },
         type: 'object'
       });
