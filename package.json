@@ -18,6 +18,9 @@
     "mocha": "^2.2.1",
     "no-iits": "0.0.0"
   },
+  "directories": {
+    "lib"
+  },
   "scripts": {
     "test": "make test"
   },
