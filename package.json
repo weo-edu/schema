@@ -4,9 +4,7 @@
   "repository": "weo-edu/schema",
   "version": "0.1.4",
   "keywords": [],
-  "files": [
-    "index.js"
-  ],
+  "main": "index",
   "dependencies": {
     "component-clone": "~0.2.2",
     "component-inherit": "0.0.3",
