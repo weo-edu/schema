@@ -54,6 +54,12 @@ function schema(type, json) {
   }
 }
 
+/**
+ * Expose use
+ */
+
+schema.use = base.use;
+
 
 
 
