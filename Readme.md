@@ -5,7 +5,7 @@ A library for creating immutable json schemas.
 ## Installation
 
 ```
-$ npm install @weo-edu/schema
+$ npm install weo-edu/schema
 ```
 
 
@@ -13,8 +13,8 @@ $ npm install @weo-edu/schema
 
 ```javascript
 
-var Schema = require('schema');
-Schema.use(require('@weo-edu/validate'));
+var Schema = require('@weo-edu/schema');
+var validator = require('@weo-edu/validate')
 
 var id = Schema('string')
   .min(16)
@@ -32,7 +32,7 @@ var user = Schema()
   .prop('id', id)
   .prop('username', username)
   .prop('displayName')
-  .required(['id', username']);
+  .required(['id', username]);
 
 var share = Schema()
   .prop('id', id)
@@ -41,8 +41,10 @@ var share = Schema()
   .prop('tags', tags)
   .required(['id', 'actor', 'tags']);
 
-// return true
-share.validate({
+shareValidate = validator(share)
+
+// return {valid: true}
+shareValidate({
   id: 'abcdabcdabcdabcd',
   actor: {
     id: 'abcdabcdabcdabcd',
