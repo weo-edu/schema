@@ -42,7 +42,7 @@ function schema(type, json) {
   switch(type) {
     case 'array':
       return array(json);
-    case 'object': 
+    case 'object':
       return object(json);
     case 'number':
     case 'integer':
@@ -53,15 +53,3 @@ function schema(type, json) {
       return base(json);
   }
 }
-
-/**
- * Expose use
- */
-
-schema.use = base.use;
-
-
-
-
-
-

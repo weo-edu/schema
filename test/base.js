@@ -35,30 +35,4 @@ describe('Schema base', function() {
   });
 
 
-
-  describe('.use', function() {
-    it('should add validate', function() {
-      Schema.use(function(schema) {
-        return function() {
-          return true;
-        };
-      });
-      var schema = Schema();
-      assert(schema.validate);
-    });
-
-    it('validator should receive schema', function() {
-      var json = {id: {type: 'string'}};
-      Schema.use(function(schema) {
-        assert.deepEqual(json, schema);
-        return function() {
-          return true;
-        };
-      });
-      var schema = Schema(json);
-    });
-  });
-
 });
-
-
