@@ -1,5 +1,7 @@
 ## schema
 
+[ ![Codeship Status for weo-edu/schema](https://img.shields.io/codeship/95032f70-ddbe-0132-f70c-5604aedd125f/master.svg)](https://codeship.com/projects/80311) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+
 A library for creating immutable json schemas.
 
 ## Installation

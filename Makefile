@@ -6,11 +6,10 @@ NODE_BIN = ./node_modules/.bin
 
 #
 # Tasks
-# 
+#
 
 validate:
-	@${NODE_BIN}/noiit
-	@${NODE_BIN}/jshint index.js test/** lib/**
+	@${NODE_BIN}/standard index.js lib/*.js
 
 test:
 	@${NODE_BIN}/mocha
