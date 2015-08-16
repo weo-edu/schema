@@ -56,5 +56,10 @@ describe('Schema number', function() {
     });
   });
 
-
+  describe('messages', function() {
+    it('should add messages to the schema', function() {
+      var schema = Schema().format('uri', 'Invalid URL')
+      assert.equal(schema.schema.messages.format, 'Invalid URL')
+    })
+  })
 });

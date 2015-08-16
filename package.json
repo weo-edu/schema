@@ -9,6 +9,7 @@
     "component-clone": "~0.2.2",
     "component-inherit": "0.0.3",
     "is": "ianstormtaylor/is",
+    "object-assign": "^3.0.0",
     "sliced": "0.0.5"
   },
   "devDependencies": {

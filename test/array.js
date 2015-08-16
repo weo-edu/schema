@@ -12,6 +12,7 @@ describe('Schema array', function() {
     it('should set items with schema', function() {
       var schema = Schema().items({type: 'string'});
       assert.deepEqual(schema.schema, {
+        messages: {},
         items: {type: 'string'},
         type: 'array'
       });
@@ -28,6 +29,7 @@ describe('Schema array', function() {
     it('should add an item to items with schema', function() {
       var schema = Schema().item({type: 'string'});
       assert.deepEqual(schema.schema, {
+        messages: {},
         items: [{type: 'string'}],
         type: 'array'
       });
