@@ -2,7 +2,7 @@
  * Modules
  */
 
-var is = require('is')
+var typeOf = require('component-type')
 
 /**
  * Libs
@@ -29,7 +29,7 @@ module.exports = schema
  */
 
 function schema (type, json) {
-  if (is.object(type)) {
+  if (typeOf(type) === 'object') {
     json = type
     type = json.type
   }

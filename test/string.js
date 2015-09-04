@@ -1,6 +1,6 @@
 var Schema = require('../lib/string');
 var assert = require('assert');
-var is = require('is');
+var typeOf = require('component-type');
 
 describe('Schema number', function() {
   describe('#max', function() {
@@ -39,7 +39,7 @@ describe('Schema number', function() {
 
     it('should set multipleOf on array schema', function() {
       var schema = Schema().pattern(/[ab]/);
-      assert(is.string(schema.schema.pattern));
+      assert(typeOf(schema.schema.pattern) === 'string');
     });
   });
 
