@@ -22,9 +22,5 @@
   "scripts": {
     "test": "make test"
   },
-  "engines": {
-    "node": "~0.10.38",
-    "npm": "~2.9.0"
-  },
   "license": "MIT"
 }
